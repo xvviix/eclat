@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉCLAT — Amsterdam • Artisanal Flower Atelier</title>
+    <meta name="description" content="ÉCLAT is an intimate, award-winning flower atelier in Amsterdam crafting timeless, sculptural floral arrangements for the discerning. Bespoke bouquets, weddings, and private experiences.">
+    <meta name="keywords" content="luxury flowers, flower atelier, premium florist Amsterdam, bespoke bouquet, wedding flowers, ÉCLAT Amsterdam">
+    
+    <!-- Tailwind CDN for premium production quality -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Elegant Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&amp;family=Inter:wght@300;400;500&amp;family=Instrument+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&amp;family=Inter:wght@300;400;500&amp;family=Instrument+Sans:wght@300;400;500&amp;display=swap');
+        
+        :root {
+            --ivory: #F8F5F1;
+            --cream: #F1EDE6;
+            --blush: #D8B8A3;
+            --sage: #7C8F7A;
+            --charcoal: #2C2C2C;
+            --gold: #C5A46E;
+            --deep: #2A2F2A;
+        }
+        
+        body {
+            font-family: 'Instrument Sans', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-feature-settings: "ss02", "ss03";
+        }
+
+        .premium-text {
+            font-feature-settings: "kern", "tnum", "ss01";
+        }
+
+        .luxury-shadow {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15), 
+                       0 10px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.05;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -1px;
+            left: 0;
+            background-color: #C5A46E;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .floral-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .floral-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.2), 
+                       0 10px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .premium-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .premium-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(197 164 110 / 0.2), 
+                       0 4px 6px -4px rgb(197 164 110 / 0.2);
+        }
+
+        .premium-btn:active {
+            transform: translateY(0px);
+        }
+
+        .gold-accent {
+            color: #C5A46E;
+        }
+
+        .elegant-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #C5A46E15, transparent);
+        }
+
+        .atelier-bg {
+            background-image: linear-gradient(rgba(44, 44, 44, 0.35), rgba(44, 44, 44, 0.45)), url('assets/atelier.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(44, 44, 44, 0.18), rgba(44, 44, 44, 0.42)), url('assets/hero.jpg');
+            background-size: cover;
+            background-position: center 30%;
+        }
+
+        .subtle-grid {
+            background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill-rule=%22evenodd%22%3E%3Cpath fill=%22%23C5A46E%22 fill-opacity=%22004%22 d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-10V8h-2v16h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 6v-4H4v4H0v2h4v4h2V8h4V6H6z%22/%3E%3C/g%3E%3C/svg%27');
+            background-size: 70px 70px;
+        }
+
+        .floral-hover {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .floral-hover:hover img {
+            transform: scale(1.05);
+        }
+
+        .watch-hover {
+            transition: transform .6s cubic-bezier(.34,1.56,.64,1);
+        }
+
+        .micro-interaction {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-active {
+            color: #C5A46E;
+            font-weight: 500;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .collection-img {
+            transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .floral-card:hover .collection-img {
+            transform: scale(1.07);
+        }
+
+        .luxury-border {
+            border: 1px solid #EDE9E3;
+        }
+
+        .section-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal {
+            animation: fadeInScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.96) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .elegant-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.015em;
+        }
+
+        .floral-detail {
+            background: linear-gradient(#F8F5F1, #F1EDE6);
+        }
+
+        .premium-nav {
+            backdrop-filter: blur(16px);
+            background: rgba(248, 245, 241, 0.92);
+        }
+
+        .artisan-text {
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .award-badge {
+            box-shadow: 0 0 0 1px #C5A46E20;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F5F1] text-[#2C2C2C] smooth-scroll">
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 premium-nav border-b border-[#EDE9E3]">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 md:px-12 py-5 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-[#2C2C2C] flex items-center justify-center rounded-full">
+                            <span class="text-[#F8F5F1] text-[21px] leading-none font-semibold tracking-tighter">É</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-3xl tracking-tighter">ÉCLAT</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm">
+                    <a href="#collections" class="nav-link text-[#3F3F3F] hover:text-[#2C2C2C] px-1 text-[0.95rem] font-medium">Collections</a>
+                    <a href="#atelier" class="nav-link text-[#3F3F3F] hover:text-[#2C2C2C] px-1 text-[0.95rem] font-medium">The Atelier</a>
+                    <a href="#experiences" class="nav-link text-[#3F3F3F] hover:text-[#2C2C2C] px-1 text-[0.95rem] font-medium">Experiences</a>
+                    <a href="#journal" class="nav-link text-[#3F3F3F] hover:text-[#2C2C2C] px-1 text-[0.95rem] font-medium">Journal</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <!-- Book CTA -->
+                    <button onclick="showBookingModal()"
+                            class="px-5 py-[9px] text-sm font-semibold rounded-full border border-[#C5A46E] text-[#C5A46E] hover:bg-[#C5A46E] hover:text-white transition-colors flex items-center gap-x-2 text-[0.92rem]">
+                        <span>Book Atelier</span>
+                    </button>
+                    
+                    <button onclick="showShopModal()"
+                            class="px-6 py-[9px] text-sm font-semibold bg-[#2C2C2C] hover:bg-black transition-colors text-white rounded-full flex items-center gap-x-[7px]">
+                        <span>Shop Collections</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Nav -->
+                <div class="md:hidden flex items-center gap-x-3">
+                    <button onclick="showBookingModal()" 
+                            class="px-4 py-1.5 text-xs font-semibold rounded-full border border-[#C5A46E] text-[#C5A46E]">
+                        Book
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="p-2 text-[#2C2C2C]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative min-h-[100dvh] flex items-center pt-16 md:pt-0">
+        <div class="hero-bg absolute inset-0 bg-cover bg-center"></div>
+        
+        <!-- Hero overlay gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#2C2C2C]/15 via-[#2C2C2C]/10 to-[#F8F5F1]/30"></div>
+        
+        <div class="max-w-screen-2xl mx-auto px-8 md:px-12 relative z-10 pt-6 md:pt-0">
+            <div class="max-w-xl">
+                <!-- Award badge -->
+                <div class="inline-flex items-center gap-x-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-white/70 mb-6">
+                    <div class="flex items-center">
+                        <div class="w-2.5 h-2.5 bg-[#C5A46E] rounded-full animate-pulse"></div>
+                        <span class="ml-2 text-xs font-semibold tracking-[0.5px] text-[#3F3F3F]">AWWARDS SOTY 2025 NOMINEE</span>
+                    </div>
+                </div>
+                
+                <h1 class="text-[3.75rem] md:text-[5.1rem] leading-[1.02] font-semibold tracking-tighter text-white heading-serif">
+                    Flowers,<br>reimagined.
+                </h1>
+                
+                <p class="mt-5 max-w-md text-lg text-white/90 leading-relaxed">
+                    An intimate atelier in the heart of Amsterdam, 
+                    crafting sculptural, seasonal florals for those who seek the extraordinary.
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-3 mt-8">
+                    <button onclick="document.getElementById('collections').scrollIntoView({ behavior: 'smooth' })" 
+                            class="premium-btn px-8 py-[14px] rounded-2xl font-semibold bg-white hover:bg-[#F8F5F1] transition-all shadow-lg text-[#2C2C2C] flex items-center gap-x-2 text-base">
+                        <span>Explore Collections</span>
+                    </button>
+                    
+                    <button onclick="document.getElementById('atelier').scrollIntoView({ behavior: 'smooth' })" 
+                            class="premium-btn px-7 py-[14px] text-white rounded-2xl font-medium flex items-center gap-x-[9px] text-base border border-white/40 hover:bg-white/10 transition-colors">
+                        <span>Meet the Atelier</span>
+                    </button>
+                </div>
+                
+                <div class="mt-10 flex items-center gap-x-5">
+                    <div class="flex -space-x-2 items-center">
+                        <div class="w-7 h-7 border border-white/60 rounded-full overflow-hidden ring-1 ring-white/70"><img src="assets/florist.jpg" class="w-full h-full object-cover"></div>
+                        <div class="w-7 h-7 border border-white/60 rounded-full overflow-hidden ring-1 ring-white/70"><img src="assets/atelier.jpg" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="text-xs leading-tight text-white/80">
+                        <span class="font-medium">Featured in</span><br>
+                        <span class="font-semibold text-white/90">Vogue, AD, Kinfolk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll prompt -->
+        <div class="absolute bottom-9 left-1/2 hidden md:flex flex-col items-center">
+            <div class="text-[10px] tracking-[1.5px] text-white/70 font-medium mb-1">SCROLL TO BEGIN</div>
+            <div class="w-px h-7 bg-white/40"></div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="border-b border-[#EDE9E3] bg-white py-5">
+        <div class="max-w-screen-2xl mx-auto px-8 md:px-12">
+            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-xs">
+                <div class="flex items-center gap-x-2.5">
+                    <span class="font-semibold text-[#3F3F3F]">Ritz Carlton</span>
+                    <span class="text-[#BDB9B2]">•</span>
+                </div>
+                <div class="flex items-center gap-x-2.5">
+                    <span class="font-semibold text-[#3F3F3F]">Hermès</span>
+                    <span class="text-[#BDB9B2]">•</span>
+                </div>
+                <div class="flex items-center gap-x-2.5">
+                    <span class="font-semibold text-[#3F3F3F]">Four Seasons</span>
+                    <span class="text-[#BDB9B2]">•</span>
+                </div>
+                <div class="flex items-center gap-x-2.5">
+                    <span class="font-semibold text-[#3F3F3F]">Private Clients</span>
+                </div>
+                <div class="text-[#8C8881] text-xs flex items-center">
+                    <span class="font-medium">2023-2025</span> &nbsp;•&nbsp; <span class="font-medium">Global Floral Excellence</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COLLECTIONS -->
+    <section id="collections" class="max-w-screen-2xl mx-auto px-8 md:px-12 pt-14 pb-16">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-9">
+            <div>
+                <span class="uppercase text-xs font-semibold tracking-[1.5px] text-[#C5A46E]">Signature Collections</span>
+                <h2 class="text-5xl heading-serif tracking-tighter font-semibold mt-1">Timeless expressions.</h2>
+            </div>
+            <div class="mt-3 md:mt-0">
+                <button onclick="showShopModal()" 
+                        class="group flex items-center gap-x-2 text-sm font-semibold text-[#2C2C2C] hover:text-[#C5A46E]">
+                    <span>Browse full archive</span> 
+                    <span class="group-hover:translate-x-0.5 transition">→</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Collection 1: Eternal -->
+            <div onclick="showCollectionModal(0)" class="floral-card group bg-white border border-[#EDE9E3] rounded-3xl overflow-hidden cursor-pointer luxury-shadow">
+                <div class="relative h-[260px]">
+                    <img src="assets/bouquet-eternal.jpg" alt="The Eternal collection — A timeless sculptural bouquet of white peonies and ivory roses" 
+                         class="collection-img w-full h-full object-cover">
+                    <div class="absolute top-4 right-4">
+                        <div class="px-3 py-1 bg-white/95 text-xs font-semibold rounded-full shadow-sm flex items-center">
+                            <span class="text-[#C5A46E]">Signature</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="font-semibold text-[1.32rem] tracking-tight">The Eternal</h3>
+                            <p class="text-[#77726B] text-sm mt-0.5">White Peony &amp; Ivory</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-medium text-sm">€295</div>
+                            <div class="text-[10px] text-[#A19C94]">Seasonal</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center text-xs">
+                            <span class="px-2 py-0.5 text-[#7C8F7A] bg-[#F1EDE6] rounded">Everlasting</span>
+                        </div>
+                        <div class="flex items-center text-[#A19C94]">
+                            <span class="text-xs font-medium">24 available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Collection 2: Blush & Noir -->
+            <div onclick="showCollectionModal(1)" class="floral-card group bg-white border border-[#EDE9E3] rounded-3xl overflow-hidden cursor-pointer luxury-shadow">
+                <div class="relative h-[260px]">
+                    <img src="assets/bouquet-blush.jpg" alt="The Blush &amp; Noir collection — Dramatic dark peonies and blush roses" 
+                         class="collection-img w-full h-full object-cover">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="font-semibold text-[1.32rem] tracking-tight">Blush &amp; Noir</h3>
+                            <p class="text-[#77726B] text-sm mt-0.5">Dramatic Romance</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-medium text-sm">€375</div>
+                            <div class="text-[10px] text-[#A19C94]">Limited</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center text-xs">
+                            <span class="px-2 py-0.5 text-[#3F3F3F] bg-[#EDE9E3] rounded">Iconic</span>
+                        </div>
+                        <div class="flex items-center text-[#A19C94]">
+                            <span class="text-xs font-medium">12 available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Collection 3: Verdant Reverie -->
+            <div onclick="showCollectionModal(2)" class="floral-card group bg-white border border-[#EDE9E3] rounded-3xl overflow-hidden cursor-pointer luxury-shadow">
+                <div class="relative h-[260px]">
+                    <img src="assets/bouquet-verdant.jpg" alt="Verdant Reverie — Lush organic green bouquet" 
+                         class="collection-img w-full h-full object-cover">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="font-semibold text-[1.32rem] tracking-tight">Verdant Reverie</h3>
+                            <p class="text-[#77726B] text-sm mt-0.5">Organic Lush</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-medium text-sm">€245</div>
+                            <div class="text-[10px] text-[#A19C94]">Signature</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center text-xs">
+                            <span class="px-2 py-0.5 text-[#7C8F7A] bg-[#F1EDE6] rounded">Wild</span>
+                        </div>
+                        <div class="flex items-center text-[#A19C94]">
+                            <span class="text-xs font-medium">38 available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Collection 4: Golden Hour -->
+            <div onclick="showCollectionModal(3)" class="floral-card group bg-white border border-[#EDE9E3] rounded-3xl overflow-hidden cursor-pointer luxury-shadow">
+                <div class="relative h-[260px]">
+                    <img src="assets/bouquet-golden.jpg" alt="Golden Hour — Warm golden tones bouquet" 
+                         class="collection-img w-full h-full object-cover">
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="font-semibold text-[1.32rem] tracking-tight">Golden Hour</h3>
+                            <p class="text-[#77726B] text-sm mt-0.5">Warm &amp; Radiant</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-medium text-sm">€325</div>
+                            <div class="text-[10px] text-[#A19C94]">Seasonal</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center text-xs">
+                            <span class="px-2 py-0.5 text-[#C5A46E] bg-[#F1EDE6] rounded">Luminous</span>
+                        </div>
+                        <div class="flex items-center text-[#A19C94]">
+                            <span class="text-xs font-medium">19 available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="mt-5 flex justify-center">
+            <div class="inline-flex items-center text-xs text-[#8C8881] font-medium">
+                <span>Each collection is handcrafted to order with the finest seasonal blooms.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATELIER / STORY -->
+    <section id="atelier" class="bg-white border-t border-b border-[#EDE9E3]">
+        <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-14">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-12 items-center">
+                
+                <!-- Text -->
+                <div class="lg:col-span-5">
+                    <div class="max-w-md">
+                        <span class="text-xs tracking-[2px] uppercase font-semibold text-[#C5A46E]">Since 2018</span>
+                        
+                        <h2 class="text-[3.1rem] leading-[1.05] heading-serif font-semibold tracking-tighter mt-1.5">An atelier<br>of intention.</h2>
+                        
+                        <div class="mt-6 text-[#47433E] leading-relaxed">
+                            <p class="artisan-text">ÉCLAT was founded in Amsterdam's Jordaan district as a quiet rebellion against mass-market floristry. We believe flowers are not mere decoration, but powerful expressions of time, memory and emotion.</p>
+                            
+                            <p class="mt-4 artisan-text">Each stem is hand-selected from small growers across the Netherlands and Europe. Every arrangement is designed in the atelier by Margot Laurent and her small team of master florists.</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-x-4 mt-7">
+                            <button onclick="document.getElementById('atelier').scrollIntoView({ behavior: 'smooth' })" class="text-sm font-medium underline decoration-[#C5A46E] underline-offset-4 hover:text-[#C5A46E]">Meet Margot</button>
+                            
+                            <div class="h-px w-5 bg-[#C5A46E30]"></div>
+                            
+                            <div>
+                                <div class="flex items-center text-xs font-medium">
+                                    <div class="text-[#C5A46E]">★</div> 
+                                    <div class="ml-1.5">2024 Floral Design of the Year</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image + Stats -->
+                <div class="lg:col-span-7">
+                    <div class="relative">
+                        <img src="assets/atelier.jpg" alt="ÉCLAT Atelier interior in Amsterdam — natural light filled floral studio with elegant wood and marble" 
+                             class="rounded-3xl w-full object-cover aspect-video lg:aspect-[16/10.3] shadow-xl">
+                        
+                        <div class="absolute bottom-5 left-5 bg-white/90 backdrop-blur-sm px-5 py-3.5 rounded-2xl border border-[#EDE9E3] shadow flex items-center gap-x-3">
+                            <div>
+                                <div class="text-xs text-[#77726B]">Handcrafted in</div>
+                                <div class="font-semibold">Jordaan, Amsterdam</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-2 -right-2 bg-white px-4 py-2.5 rounded-2xl shadow-md border border-[#EDE9E3] hidden lg:flex items-center gap-x-[9px]">
+                            <div class="flex items-center">
+                                <span class="text-[#C5A46E] font-bold text-xl">47</span>
+                            </div>
+                            <div class="text-xs leading-none">
+                                <span class="font-medium">Masterpieces</span><br>
+                                <span class="text-[#8C8881]">delivered this month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Founder section -->
+            <div class="mt-12 lg:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-x-10 items-center">
+                <div class="lg:col-span-4">
+                    <div class="flex items-center gap-x-4">
+                        <img src="assets/florist.jpg" alt="Margot Laurent, founder of ÉCLAT" class="w-16 h-16 rounded-full object-cover ring-2 ring-[#EDE9E3]">
+                        <div>
+                            <div class="font-semibold">Margot Laurent</div>
+                            <div class="text-sm text-[#77726B]">Founder &amp; Creative Director</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-8 mt-6 lg:mt-0">
+                    <div class="max-w-2xl">
+                        <p class="text-[#47433E] italic text-[1.02rem] leading-relaxed">"I was trained in the classical tradition in Paris and Kyoto. My approach is rooted in restraint. The most powerful arrangements are those that allow each bloom to speak with clarity."</p>
+                        
+                        <div class="flex items-center mt-4">
+                            <div class="px-3.5 py-[4px] text-xs font-medium bg-[#F1EDE6] text-[#3F3F3F] rounded-full">Trained at L’École de Fleuristes, Paris</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experiences" class="max-w-screen-2xl mx-auto px-8 md:px-12 py-16">
+        <div class="flex flex-col md:flex-row gap-x-5 md:items-end justify-between mb-9">
+            <div>
+                <span class="uppercase text-xs font-semibold tracking-[1.5px] text-[#C5A46E]">Bespoke Experiences</span>
+                <h2 class="text-[3.15rem] heading-serif tracking-tighter font-semibold">Crafted for you.</h2>
+            </div>
+            <p class="max-w-xs text-[#5E5952] text-sm mt-2 md:mt-0">Private sessions, weddings, and corporate commissions in the atelier or at your location.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Experience 1 -->
+            <div class="group bg-white border border-[#EDE9E3] rounded-3xl p-6 flex flex-col">
+                <div class="flex-1">
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#F1EDE6] text-[#C5A46E] rounded-2xl mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-[1.35rem]">Private Atelier Session</h3>
+                    <p class="mt-2.5 text-sm text-[#5E5952]">A deeply personal 90-minute workshop. Design your own signature bouquet alongside Margot and the team.</p>
+                    
+                    <div class="mt-6">
+                        <div class="flex items-baseline">
+                            <span class="font-semibold text-xl">€285</span>
+                            <span class="text-xs ml-1 text-[#A19C94]">per person</span>
+                        </div>
+                        <div class="mt-1 text-xs text-[#A19C94]">2–6 guests</div>
+                    </div>
+                </div>
+                
+                <button onclick="showBookingModal('atelier')" 
+                        class="mt-auto pt-4 group-hover:bg-[#F8F5F1] transition-colors text-sm w-full py-[11px] font-semibold border border-[#EDE9E3] rounded-2xl flex justify-center items-center gap-2 hover:border-[#C5A46E]">
+                    <span>Reserve a session</span>
+                </button>
+            </div>
+            
+            <!-- Experience 2 -->
+            <div class="group bg-white border border-[#EDE9E3] rounded-3xl p-6 flex flex-col">
+                <div class="flex-1">
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#F1EDE6] text-[#C5A46E] rounded-2xl mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-[1.35rem]">Weddings &amp; Celebrations</h3>
+                    <p class="mt-2.5 text-sm text-[#5E5952]">Full-service floral design for your most meaningful moments. From intimate ceremonies to grand events.</p>
+                    
+                    <div class="mt-6 flex flex-wrap gap-1.5">
+                        <div class="text-xs px-3 py-[1px] rounded-full bg-[#F1EDE6] text-[#3F3F3F]">From €3,800</div>
+                    </div>
+                </div>
+                
+                <button onclick="showBookingModal('wedding')" 
+                        class="mt-auto pt-4 group-hover:bg-[#F8F5F1] transition-colors text-sm w-full py-[11px] font-semibold border border-[#EDE9E3] rounded-2xl flex justify-center items-center gap-2 hover:border-[#C5A46E]">
+                    <span>Request consultation</span>
+                </button>
+            </div>
+            
+            <!-- Experience 3 -->
+            <div class="group bg-white border border-[#EDE9E3] rounded-3xl p-6 flex flex-col">
+                <div class="flex-1">
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#F1EDE6] text-[#C5A46E] rounded-2xl mb-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 01-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-[1.35rem]">Corporate &amp; Events</h3>
+                    <p class="mt-2.5 text-sm text-[#5E5952]">Elevated floral installations, weekly office arrangements, and signature event commissions.</p>
+                    
+                    <div class="mt-6">
+                        <div class="text-xs px-3 py-[1px] bg-[#F1EDE6] text-[#3F3F3F] inline-flex rounded-full">From €1,800</div>
+                    </div>
+                </div>
+                
+                <button onclick="showBookingModal('corporate')" 
+                        class="mt-auto pt-4 group-hover:bg-[#F8F5F1] transition-colors text-sm w-full py-[11px] font-semibold border border-[#EDE9E3] rounded-2xl flex justify-center items-center gap-2 hover:border-[#C5A46E]">
+                    <span>Start a project</span>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CRAFTSMANSHIP -->
+    <section class="max-w-screen-2xl mx-auto px-8 md:px-12 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-[#2C2C2C] rounded-[3rem] px-8 py-9 lg:p-9 text-white">
+            <div class="lg:pl-2">
+                <div class="max-w-sm">
+                    <span class="px-4 py-[3px] rounded-full text-xs bg-white/10 text-white/70 font-medium tracking-wider">CRAFTSMANSHIP</span>
+                    
+                    <h2 class="text-white heading-serif text-[2.85rem] font-semibold tracking-tighter leading-none mt-3">Every stem<br>has a story.</h2>
+                    
+                    <p class="mt-4 text-white/75">We source exclusively from ethical growers. Our techniques are informed by centuries-old European floral traditions and contemporary Japanese Ikebana principles.</p>
+                    
+                    <div class="mt-8 flex items-center gap-x-2">
+                        <div class="flex -space-x-1">
+                            <div class="w-6 h-6 bg-white/30 rounded-full border border-white/50"></div>
+                            <div class="w-6 h-6 bg-white/30 rounded-full border border-white/50"></div>
+                            <div class="w-6 h-6 bg-white/30 rounded-full border border-white/50"></div>
+                        </div>
+                        <span class="text-xs tracking-wider font-medium">7 MASTER FLORISTS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <img src="assets/craft-detail.jpg" alt="Close-up of hands arranging flowers — exquisite craftsmanship at ÉCLAT" class="rounded-3xl w-full aspect-video object-cover lg:aspect-auto lg:h-[260px]">
+                
+                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#2C2C2C] to-transparent rounded-b-3xl"></div>
+                
+                <div class="absolute bottom-5 left-5">
+                    <div class="flex items-center gap-x-[6px]">
+                        <div class="text-xs px-3 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-center font-medium flex items-center gap-x-[4px]">
+                            <span class="inline-block w-1.5 h-1.5 bg-[#C5A46E] rounded-full"></span>
+                            <span>Hand-selected</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section id="journal" class="max-w-screen-2xl mx-auto px-8 md:px-12 pb-16 pt-3">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <span class="text-xs font-semibold tracking-[1.75px] uppercase text-[#C5A46E]">The Journal</span>
+                <h2 class="heading-serif font-semibold text-[3rem] tracking-tighter">Stories in bloom.</h2>
+            </div>
+            <a href="#" class="hidden md:flex text-sm font-semibold text-[#2C2C2C] items-center gap-x-2 hover:text-[#C5A46E]">Read all stories <span>→</span></a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Journal 1 -->
+            <div onclick="showJournalModal(0)" class="group cursor-pointer">
+                <div class="rounded-3xl overflow-hidden aspect-[16/10.2] relative">
+                    <img src="assets/journal-1.jpg" alt="Journal: The Language of Flowers" class="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/35"></div>
+                    <div class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold bg-white rounded-full text-[#2C2C2C]">Essay</div>
+                </div>
+                <div class="mt-4 px-1">
+                    <div class="flex justify-between text-xs">
+                        <span class="text-[#8C8881]">March 2025</span>
+                        <span class="font-medium">12 min read</span>
+                    </div>
+                    <h4 class="font-semibold text-[1.05rem] mt-1.5 group-hover:text-[#C5A46E] transition-colors">The Language of Flowers: A Quiet Manifesto</h4>
+                    <p class="text-sm text-[#5E5952] mt-1.5 leading-snug line-clamp-2">Why restraint, seasonality, and intention define the most powerful floral arrangements of our time.</p>
+                </div>
+            </div>
+            
+            <!-- Journal 2 -->
+            <div onclick="showJournalModal(1)" class="group cursor-pointer">
+                <div class="rounded-3xl overflow-hidden aspect-[16/10.2] relative">
+                    <img src="assets/journal-2.jpg" alt="Journal: Spring at ÉCLAT" class="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/35"></div>
+                    <div class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold bg-white rounded-full text-[#2C2C2C]">Field Notes</div>
+                </div>
+                <div class="mt-4 px-1">
+                    <div class="flex justify-between text-xs">
+                        <span class="text-[#8C8881]">February 2025</span>
+                        <span class="font-medium">8 min read</span>
+                    </div>
+                    <h4 class="font-semibold text-[1.05rem] mt-1.5 group-hover:text-[#C5A46E] transition-colors">Spring at ÉCLAT: A Season in Bloom</h4>
+                    <p class="text-sm text-[#5E5952] mt-1.5 leading-snug line-clamp-2">Behind the scenes of our most anticipated season. The arrival of peonies, ranunculus, and wild greens.</p>
+                </div>
+            </div>
+            
+            <!-- Journal 3 -->
+            <div onclick="showJournalModal(2)" class="group cursor-pointer">
+                <div class="rounded-3xl overflow-hidden aspect-[16/10.2] relative">
+                    <img src="assets/bouquet-eternal.jpg" alt="Journal: Memory &amp; Form" class="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/35"></div>
+                    <div class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold bg-white rounded-full text-[#2C2C2C]">Interview</div>
+                </div>
+                <div class="mt-4 px-1">
+                    <div class="flex justify-between text-xs">
+                        <span class="text-[#8C8881]">January 2025</span>
+                        <span class="font-medium">15 min read</span>
+                    </div>
+                    <h4 class="font-semibold text-[1.05rem] mt-1.5 group-hover:text-[#C5A46E] transition-colors">Memory &amp; Form: Floral Design as Heirloom</h4>
+                    <p class="text-sm text-[#5E5952] mt-1.5 leading-snug line-clamp-2">A conversation with Margot Laurent on creating floral heirlooms that transcend trends and live on in memory.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="bg-[#2C2C2C] px-8 md:px-12 py-12 max-w-screen-2xl mx-auto rounded-t-[3rem]">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="flex justify-center">
+                <div class="inline-flex px-3 py-1 bg-white/10 backdrop-blur text-white text-xs font-medium items-center rounded-2xl gap-2">
+                    <span>Next availability</span> 
+                    <span class="font-semibold px-2">August 21</span>
+                </div>
+            </div>
+            
+            <h2 class="text-white text-[2.45rem] mt-5 leading-[1.05] font-semibold tracking-tight">Let us design something<br>extraordinary together.</h2>
+            
+            <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+                <button onclick="showBookingModal()" 
+                        class="px-8 py-[13px] bg-[#C5A46E] text-white font-semibold transition-colors hover:bg-[#B38F5B] text-sm rounded-2xl">
+                    Book a Private Consultation
+                </button>
+                <button onclick="showShopModal()" 
+                        class="px-7 py-[13px] text-white font-semibold border border-white/40 hover:bg-white/10 transition-colors text-sm rounded-2xl">
+                    Shop the Collections
+                </button>
+            </div>
+            
+            <div class="text-xs mt-5 text-white/60">We respond within 4 hours on weekdays.</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white max-w-screen-2xl mx-auto px-8 md:px-12 py-9 border-t border-[#EDE9E3]">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-y-8">
+            <div>
+                <div class="flex items-center">
+                    <div class="w-7 h-7 bg-[#2C2C2C] flex items-center justify-center rounded-full">
+                        <span class="text-white text-lg font-semibold leading-none pt-[1px]">É</span>
+                    </div>
+                    <span class="ml-2 font-semibold text-xl">ÉCLAT</span>
+                </div>
+                <div class="text-xs mt-2 text-[#8C8881]">Jordaan, Amsterdam</div>
+                
+                <div class="mt-4 text-xs text-[#5E5952]">
+                    Prinsengracht 291<br>
+                    1016 HK Amsterdam, NL
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-x-14 gap-y-7 text-sm">
+                <div>
+                    <div class="font-semibold text-xs tracking-wider mb-3 text-[#8C8881]">STUDIO</div>
+                    <div class="space-y-[7px] text-sm">
+                        <div><a href="#" class="hover:text-[#C5A46E]">The Atelier</a></div>
+                        <div><a href="#" class="hover:text-[#C5A46E]">Our Philosophy</a></div>
+                        <div><a href="#" class="hover:text-[#C5A46E]">Sustainability</a></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-semibold text-xs tracking-wider mb-3 text-[#8C8881]">EXPLORE</div>
+                    <div class="space-y-[7px] text-sm">
+                        <div><a href="#collections" class="hover:text-[#C5A46E]">Collections</a></div>
+                        <div><a href="#experiences" class="hover:text-[#C5A46E]">Experiences</a></div>
+                        <div><a href="#journal" class="hover:text-[#C5A46E]">Journal</a></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-semibold text-xs tracking-wider mb-3 text-[#8C8881]">CONNECT</div>
+                    <div class="space-y-[7px] text-sm">
+                        <div><a href="#" class="hover:text-[#C5A46E]">Instagram</a></div>
+                        <div><a href="#" class="hover:text-[#C5A46E]">Pinterest</a></div>
+                        <div><a href="#" class="hover:text-[#C5A46E]">Contact</a></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:text-right">
+                <div class="text-xs text-[#8C8881]">© ÉCLAT 2026</div>
+                <div class="text-xs mt-1 text-[#8C8881]">All rights reserved.</div>
+                
+                <div class="mt-5 md:mt-3 text-xs flex md:justify-end gap-x-4 text-[#8C8881]">
+                    <a href="#" class="hover:text-[#C5A46E]">Privacy</a>
+                    <a href="#" class="hover:text-[#C5A46E]">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COLLECTION MODAL -->
+    <div id="collection-modal" onclick="if (event.target.id === 'collection-modal') hideCollectionModal()" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-5">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white max-w-[940px] w-full rounded-3xl overflow-hidden shadow-2xl max-h-[90vh]">
+            <div class="flex flex-col lg:flex-row">
+                
+                <!-- Image side -->
+                <div id="modal-image-container" class="lg:w-5/12 h-[280px] lg:h-auto relative">
+                    <!-- Populated via JS -->
+                </div>
+                
+                <div class="lg:w-7/12 p-7 md:p-9 flex flex-col">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div id="modal-category" class="text-xs tracking-[1.5px] font-semibold text-[#C5A46E]"></div>
+                            <h3 id="modal-title" class="text-4xl heading-serif font-semibold tracking-tighter"></h3>
+                        </div>
+                        
+                        <button onclick="hideCollectionModal()" class="text-[#77726B] hover:text-[#2C2C2C]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6h12v12" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div id="modal-price" class="mt-1 font-semibold text-xl"></div>
+                    
+                    <div id="modal-description" class="mt-4 text-[#47433E] leading-relaxed text-[0.95rem]"></div>
+                    
+                    <div class="mt-auto pt-6">
+                        <div class="flex flex-wrap gap-x-3 gap-y-1.5 text-xs">
+                            <div class="px-3 py-[4px] rounded-full bg-[#F1EDE6] text-[#3F3F3F] flex items-center gap-x-1">
+                                <span id="modal-availability"></span>
+                            </div>
+                            <div class="px-3 py-[4px] rounded-full bg-[#F1EDE6] text-[#3F3F3F]" id="modal-lead"></div>
+                        </div>
+                        
+                        <div class="flex items-center gap-x-3 mt-6">
+                            <button onclick="addToCartAndClose()" class="flex-1 premium-btn bg-[#2C2C2C] hover:bg-black text-white text-sm font-semibold py-[13px] rounded-2xl">
+                                Add to cart — €<span id="modal-price-btn"></span>
+                            </button>
+                            
+                            <button onclick="hideCollectionModal(); showBookingModal('custom')" class="flex-1 text-sm font-semibold border py-[13px] rounded-2xl border-[#EDE9E3] hover:bg-[#F8F5F1]">
+                                Customize
+                            </button>
+                        </div>
+                        
+                        <div class="text-[10px] text-center text-[#A19C94] mt-3">Includes delivery within Amsterdam • Ships worldwide</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING MODAL -->
+    <div id="booking-modal" onclick="if (event.target.id === 'booking-modal') hideBookingModal()" class="hidden fixed inset-0 bg-black/60 z-[110] flex items-center justify-center p-5">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-[460px] rounded-3xl overflow-hidden shadow-2xl">
+            <div class="px-7 pt-7 pb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-xs font-semibold tracking-widest text-[#C5A46E]">ÉCLAT ATELIER</span>
+                        <h4 id="booking-title" class="font-semibold text-3xl tracking-tighter">Book an experience</h4>
+                    </div>
+                    <button onclick="hideBookingModal()" class="text-[#77726B]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6h12v12" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <form id="booking-form" onsubmit="submitBooking(event)">
+                    <div class="space-y-5">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs block mb-1.5 font-medium text-[#5E5952]">Full name</label>
+                                <input type="text" id="booking-name" required value="Isabella Moreau" class="w-full border border-[#EDE9E3] px-4 py-[9px] text-sm rounded-2xl focus:outline-none focus:border-[#C5A46E]">
+                            </div>
+                            <div>
+                                <label class="text-xs block mb-1.5 font-medium text-[#5E5952]">Email</label>
+                                <input type="email" id="booking-email" required value="isabella@studio-m.com" class="w-full border border-[#EDE9E3] px-4 py-[9px] text-sm rounded-2xl focus:outline-none focus:border-[#C5A46E]">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="text-xs block mb-1.5 font-medium text-[#5E5952]">Experience type</label>
+                            <select id="booking-type" class="w-full border border-[#EDE9E3] px-4 py-[9px] text-sm rounded-2xl focus:outline-none focus:border-[#C5A46E]">
+                                <option value="Private Atelier Session">Private Atelier Session (€285)</option>
+                                <option value="Wedding Consultation">Wedding Consultation</option>
+                                <option value="Corporate Project">Corporate Project</option>
+                                <option value="Custom Bespoke Bouquet">Custom Bespoke Bouquet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs block mb-1.5 font-medium text-[#5E5952]">Preferred date</label>
+                                <input type="date" id="booking-date" value="2026-08-28" class="w-full border border-[#EDE9E3] px-4 py-[9px] text-sm rounded-2xl focus:outline-none focus:border-[#C5A46E]">
+                            </div>
+                            <div>
+                                <label class="text-xs block mb-1.5 font-medium text-[#5E5952]">Guests / Size</label>
+                                <select id="booking-guests" class="w-full border border-[#EDE9E3] px-4 py-[9px] text-sm rounded-2xl focus:outline-none focus:border-[#C5A46E]">
+                                    <option>1 guest</option>
+                                    <option selected>2 guests</option>
+                                    <option>3 guests</option>
+                                    <option>4–6 guests</option>
+                                    <option>Corporate (10+)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="text-xs block mb-1.5 font-medium text-[#5E5952]">Notes (optional)</label>
+                            <textarea id="booking-notes" rows="2" placeholder="I am looking for a romantic, soft palette for my wedding..." class="w-full border border-[#EDE9E3] px-4 py-3 text-sm rounded-2xl focus:outline-none focus:border-[#C5A46E]"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-x-3 pt-5">
+                        <button type="submit" class="flex-1 bg-[#2C2C2C] hover:bg-black transition-colors text-white text-sm font-semibold rounded-2xl py-[13px]">
+                            Confirm booking request
+                        </button>
+                    </div>
+                    
+                    <div class="text-center text-xs text-[#A19C94] pt-2.5">We will confirm availability within 4 hours.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOP / CART MODAL -->
+    <div id="shop-modal" onclick="if (event.target.id === 'shop-modal') hideShopModal()" class="hidden fixed inset-0 bg-black/60 z-[110] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-[1000px] rounded-3xl shadow-2xl overflow-hidden">
+            <div class="px-7 pt-6 pb-2 flex justify-between items-center border-b">
+                <div>
+                    <span class="font-semibold tracking-tight text-3xl">The Collection</span>
+                    <span class="text-sm ml-2 text-[#A19C94]">2026 Archive</span>
+                </div>
+                <button onclick="hideShopModal()" class="px-2 py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6h12v12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="p-7">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    
+                    <!-- Mini cards for shop -->
+                    <div onclick="addToCartFromShop(0); hideShopModal()" class="cursor-pointer border border-[#EDE9E3] rounded-2xl p-3 flex gap-x-3 hover:border-[#C5A46E] transition-colors">
+                        <div class="w-14 h-14 flex-shrink-0"><img src="assets/bouquet-eternal.jpg" class="rounded-xl object-cover w-full h-full"></div>
+                        <div class="flex-1 pt-0.5">
+                            <div class="font-medium text-sm">The Eternal</div>
+                            <div class="text-xs text-[#8C8881]">White Peony • €295</div>
+                            <div class="text-[#C5A46E] text-xs font-medium mt-2">Add to cart →</div>
+                        </div>
+                    </div>
+                    
+                    <div onclick="addToCartFromShop(1); hideShopModal()" class="cursor-pointer border border-[#EDE9E3] rounded-2xl p-3 flex gap-x-3 hover:border-[#C5A46E] transition-colors">
+                        <div class="w-14 h-14 flex-shrink-0"><img src="assets/bouquet-blush.jpg" class="rounded-xl object-cover w-full h-full"></div>
+                        <div class="flex-1 pt-0.5">
+                            <div class="font-medium text-sm">Blush &amp; Noir</div>
+                            <div class="text-xs text-[#8C8881]">Dramatic • €375</div>
+                            <div class="text-[#C5A46E] text-xs font-medium mt-2">Add to cart →</div>
+                        </div>
+                    </div>
+                    
+                    <div onclick="addToCartFromShop(2); hideShopModal()" class="cursor-pointer border border-[#EDE9E3] rounded-2xl p-3 flex gap-x-3 hover:border-[#C5A46E] transition-colors">
+                        <div class="w-14 h-14 flex-shrink-0"><img src="assets/bouquet-verdant.jpg" class="rounded-xl object-cover w-full h-full"></div>
+                        <div class="flex-1 pt-0.5">
+                            <div class="font-medium text-sm">Verdant Reverie</div>
+                            <div class="text-xs text-[#8C8881]">Organic • €245</div>
+                            <div class="text-[#C5A46E] text-xs font-medium mt-2">Add to cart →</div>
+                        </div>
+                    </div>
+                    
+                    <div onclick="addToCartFromShop(3); hideShopModal()" class="cursor-pointer border border-[#EDE9E3] rounded-2xl p-3 flex gap-x-3 hover:border-[#C5A46E] transition-colors">
+                        <div class="w-14 h-14 flex-shrink-0"><img src="assets/bouquet-golden.jpg" class="rounded-xl object-cover w-full h-full"></div>
+                        <div class="flex-1 pt-0.5">
+                            <div class="font-medium text-sm">Golden Hour</div>
+                            <div class="text-xs text-[#8C8881]">Luminous • €325</div>
+                            <div class="text-[#C5A46E] text-xs font-medium mt-2">Add to cart →</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5 flex items-center text-xs justify-center">
+                    <div class="px-3 py-1 flex items-center bg-[#F8F5F1] rounded-2xl">
+                        <span class="text-[#5E5952]">All bouquets include a handwritten note &amp; premium vase option.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="px-7 pb-6 flex items-center justify-between text-xs">
+                <div class="text-[#8C8881]">Free delivery in Amsterdam • Worldwide shipping from €45</div>
+                <button onclick="hideShopModal()" class="font-medium text-[#C5A46E]">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-[200]"></div>
+
+    <script>
+        // Tailwind script config
+        function initTailwind() {
+            document.documentElement.style.setProperty('--accent', '#C5A46E');
+            
+            // Optional Tailwind script config if needed
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .line-clamp-2 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Collection data
+        const collections = [
+            {
+                id: 0,
+                title: "The Eternal",
+                category: "SIGNATURE",
+                price: 295,
+                image: "assets/bouquet-eternal.jpg",
+                description: "An ode to timeless elegance. Hand-selected white peonies, ivory roses, delicate anemones, and soft sage greenery. A refined arrangement that transcends seasons and trends.",
+                availability: "24 available",
+                lead: "4-5 days lead time",
+                details: "Designed in a hand-blown glass vase. Lasts 8–12 days. Includes a handwritten card with care instructions."
+            },
+            {
+                id: 1,
+                title: "Blush & Noir",
+                category: "ICONIC",
+                price: 375,
+                image: "assets/bouquet-blush.jpg",
+                description: "A dramatic statement of romance. Deep burgundy peonies, blush roses, rich black calla lilies, and dark foliage. Sophisticated, moody, and unforgettable.",
+                availability: "12 available",
+                lead: "3-4 days lead time",
+                details: "Presented in our signature matte black ceramic vase. A true collector’s piece for those who love contrast and depth."
+            },
+            {
+                id: 2,
+                title: "Verdant Reverie",
+                category: "WILD",
+                price: 245,
+                image: "assets/bouquet-verdant.jpg",
+                description: "An organic expression of nature. Lush wild greenery, white hydrangeas, ferns, eucalyptus and delicate ranunculus. Full of life, movement, and fresh energy.",
+                availability: "38 available",
+                lead: "2-4 days lead time",
+                details: "Delivered in a beautiful speckled ceramic vessel. Perfect for everyday elegance or gifting."
+            },
+            {
+                id: 3,
+                title: "Golden Hour",
+                category: "LUMINOUS",
+                price: 325,
+                image: "assets/bouquet-golden.jpg",
+                description: "The warmth of golden hour captured in florals. Creamy yellow roses, soft peach dahlias, golden ranunculus and delicate foliage. A celebration of light and life.",
+                availability: "19 available",
+                lead: "3-5 days lead time",
+                details: "Presented in a warm golden ceramic vase. A radiant gift for celebrations and anniversaries."
+            }
+        ]
+        
+        let cart = []
+        
+        function showCollectionModal(index) {
+            const collection = collections[index]
+            const modal = document.getElementById('collection-modal')
+            const imageContainer = document.getElementById('modal-image-container')
+            
+            // Set image
+            imageContainer.innerHTML = `
+                <img src="${collection.image}" alt="${collection.title}" class="w-full h-full object-cover lg:h-full">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 lg:hidden"></div>
+            `
+            
+            // Populate content
+            document.getElementById('modal-category').innerHTML = collection.category
+            document.getElementById('modal-title').innerHTML = collection.title
+            document.getElementById('modal-price').innerHTML = `€${collection.price}`
+            document.getElementById('modal-description').innerHTML = collection.description + `<div class="mt-4 text-xs leading-relaxed text-[#77726B]">${collection.details}</div>`
+            document.getElementById('modal-availability').innerHTML = collection.availability
+            document.getElementById('modal-lead').innerHTML = collection.lead
+            document.getElementById('modal-price-btn').innerHTML = collection.price
+            
+            modal.classList.remove('hidden')
+            modal.classList.add('flex')
+        }
+        
+        function hideCollectionModal() {
+            const modal = document.getElementById('collection-modal')
+            modal.classList.remove('flex')
+            modal.classList.add('hidden')
+        }
+        
+        function showBookingModal(type = null) {
+            const modal = document.getElementById('booking-modal')
+            const titleEl = document.getElementById('booking-title')
+            
+            if (type === 'atelier') {
+                titleEl.innerHTML = 'Private Atelier Session'
+                document.getElementById('booking-type').value = 'Private Atelier Session'
+            } else if (type === 'wedding') {
+                titleEl.innerHTML = 'Wedding Consultation'
+                document.getElementById('booking-type').value = 'Wedding Consultation'
+            } else if (type === 'corporate') {
+                titleEl.innerHTML = 'Corporate Project'
+                document.getElementById('booking-type').value = 'Corporate Project'
+            } else if (type === 'custom') {
+                titleEl.innerHTML = 'Bespoke Commission'
+                document.getElementById('booking-type').value = 'Custom Bespoke Bouquet'
+            } else {
+                titleEl.innerHTML = 'Book an experience'
+            }
+            
+            modal.classList.remove('hidden')
+            modal.classList.add('flex')
+        }
+        
+        function hideBookingModal() {
+            const modal = document.getElementById('booking-modal')
+            modal.classList.remove('flex')
+            modal.classList.add('hidden')
+        }
+        
+        function submitBooking(e) {
+            e.preventDefault()
+            
+            const modal = document.getElementById('booking-modal')
+            const form = document.getElementById('booking-form')
+            
+            // Simulate successful booking
+            modal.classList.remove('flex')
+            modal.classList.add('hidden')
+            
+            // Show success toast
+            showToast('Booking request received. We will contact you shortly.', true)
+            
+            // Reset form
+            form.reset()
+            
+            // Optional: Add a little note to the cart or track
+            setTimeout(() => {
+                const toast = document.getElementById('toast-container')
+                if (toast) toast.innerHTML = ''
+            }, 5200)
+        }
+        
+        function showShopModal() {
+            const modal = document.getElementById('shop-modal')
+            modal.classList.remove('hidden')
+            modal.classList.add('flex')
+        }
+        
+        function hideShopModal() {
+            const modal = document.getElementById('shop-modal')
+            modal.classList.remove('flex')
+            modal.classList.add('hidden')
+        }
+        
+        function addToCartAndClose() {
+            const modal = document.getElementById('collection-modal')
+            const priceText = document.getElementById('modal-price').innerText
+            const title = document.getElementById('modal-title').innerText
+            
+            const price = parseInt(priceText.replace('€', ''))
+            
+            addToCart(title, price)
+            
+            modal.classList.remove('flex')
+            modal.classList.add('hidden')
+        }
+        
+        function addToCartFromShop(index) {
+            const collection = collections[index]
+            addToCart(collection.title, collection.price)
+        }
+        
+        function addToCart(title, price) {
+            cart.push({ title, price, id: Date.now() })
+            
+            showToast(`${title} added to cart`)
+            
+            // Show mini cart UI
+            setTimeout(() => {
+                showMiniCart()
+            }, 1100)
+        }
+        
+        function showMiniCart() {
+            const container = document.getElementById('toast-container')
+            
+            // Clear previous
+            container.innerHTML = ''
+            
+            let html = `
+                <div class="bg-white shadow-xl border border-[#EDE9E3] rounded-3xl px-5 py-[13px] w-[270px]">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="font-semibold text-sm">Cart (${cart.length})</div>
+                        <button onclick="clearCartToast()" class="text-xs px-3 py-1 text-[#77726B]">Clear</button>
+                    </div>
+                    
+                    <div class="space-y-2 max-h-[125px] overflow-auto pr-1">
+            `
+            
+            let total = 0
+            cart.forEach((item, idx) => {
+                total += item.price
+                html += `
+                    <div class="flex justify-between items-center text-sm">
+                        <div class="flex-1">
+                            <span>${item.title}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-medium text-xs">€${item.price}</span>
+                            <button onclick="removeFromCart(${idx}, event)" class="text-red-400 hover:text-red-600 px-1 text-xs">×</button>
+                        </div>
+                    </div>
+                `
+            })
+            
+            html += `
+                    </div>
+                    
+                    <div class="flex items-center justify-between border-t border-[#EDE9E3] pt-3 mt-2.5">
+                        <div>
+                            <span class="font-medium">Total</span>
+                        </div>
+                        <div class="font-semibold">€${total}</div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <button onclick="checkout()" class="transition-colors w-full text-xs py-[9px] font-semibold bg-[#2C2C2C] hover:bg-black text-white rounded-2xl">
+                            Checkout
+                        </button>
+                    </div>
+                </div>
+            `
+            
+            container.innerHTML = html
+        }
+        
+        function removeFromCart(index, e) {
+            e.stopImmediatePropagation()
+            cart.splice(index, 1)
+            
+            if (cart.length === 0) {
+                document.getElementById('toast-container').innerHTML = ''
+            } else {
+                showMiniCart()
+            }
+        }
+        
+        function clearCartToast() {
+            cart = []
+            document.getElementById('toast-container').innerHTML = ''
+        }
+        
+        function checkout() {
+            const container = document.getElementById('toast-container')
+            container.innerHTML = ''
+            
+            const total = cart.reduce((acc, item) => acc + item.price, 0)
+            
+            const successHTML = `
+                <div class="bg-white border border-[#EDE9E3] rounded-3xl px-5 py-5 w-[270px]">
+                    <div class="flex justify-center">
+                        <div class="px-5 py-3 text-center">
+                            <div class="mx-auto flex justify-center items-center w-9 h-9 bg-[#F1EDE6] text-[#C5A46E] rounded-full mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                                </svg>
+                            </div>
+                            
+                            <div class="font-semibold">Thank you!</div>
+                            <div class="text-xs text-[#5E5952]">Order confirmed for €${total}.</div>
+                            
+                            <div class="mt-3 text-xs">A confirmation has been sent to your email.</div>
+                            
+                            <button onclick="finishCheckout()" class="mt-4 w-full text-xs bg-[#2C2C2C] text-white font-medium py-2 px-4 rounded-[14px]">Return to homepage</button>
+                        </div>
+                    </div>
+                </div>
+            `
+            
+            container.innerHTML = successHTML
+            
+            // Clear cart
+            cart = []
+        }
+        
+        function finishCheckout() {
+            document.getElementById('toast-container').innerHTML = ''
+            // Optional: scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+        
+        function showToast(message, isSuccess = false) {
+            const container = document.getElementById('toast-container')
+            container.innerHTML = ''
+            
+            const toastHTML = `
+                <div class="${isSuccess ? 'bg-[#C5A46E] text-white' : 'bg-white border border-[#EDE9E3]'} px-4 py-[10px] rounded-2xl shadow-lg flex items-center gap-x-2 max-w-[250px]">
+                    <div class="flex-1">
+                        <span class="font-medium text-sm">${message}</span>
+                    </div>
+                </div>
+            `
+            
+            container.innerHTML = toastHTML
+            
+            setTimeout(() => {
+                if (container.innerHTML.includes(message)) {
+                    container.innerHTML = ''
+                }
+            }, 2900)
+        }
+        
+        function toggleMobileMenu() {
+            const nav = document.querySelector('nav')
+            
+            const existing = document.getElementById('mobile-menu')
+            if (existing) {
+                existing.remove()
+                return
+            }
+            
+            const mobileMenu = document.createElement('div')
+            mobileMenu.id = 'mobile-menu'
+            mobileMenu.className = `md:hidden absolute top-[67px] left-0 right-0 bg-white border-b border-[#EDE9E3] px-8 py-5 shadow-xl`
+            
+            mobileMenu.innerHTML = `
+                <div class="flex flex-col text-[0.95rem]">
+                    <a href="#collections" class="py-[9px] font-medium nav-link">Collections</a>
+                    <a href="#atelier" class="py-[9px] font-medium nav-link">The Atelier</a>
+                    <a href="#experiences" class="py-[9px] font-medium nav-link">Experiences</a>
+                    <a href="#journal" class="py-[9px] font-medium nav-link">Journal</a>
+                    
+                    <div class="pt-3 mt-3 border-t flex flex-col gap-y-[7px]">
+                        <button onclick="showBookingModal(); document.getElementById('mobile-menu').remove()" class="text-left py-1 text-sm font-medium">Book Atelier</button>
+                        <button onclick="showShopModal(); document.getElementById('mobile-menu').remove()" class="text-left bg-[#2C2C2C] text-white py-[8px] text-sm px-5 rounded-2xl font-semibold">Shop Collections</button>
+                    </div>
+                </div>
+            `
+            
+            nav.appendChild(mobileMenu)
+            
+            // Auto-close on link click
+            const links = mobileMenu.querySelectorAll('a')
+            links.forEach(link => {
+                link.onclick = () => {
+                    setTimeout(() => {
+                        if (mobileMenu && mobileMenu.parentNode) mobileMenu.parentNode.removeChild(mobileMenu)
+                    }, 300)
+                }
+            })
+        }
+        
+        // Journal modal
+        function showJournalModal(index) {
+            const journalModal = document.createElement('div')
+            journalModal.className = `fixed inset-0 bg-black/70 z-[120] flex items-center justify-center p-5`
+            
+            let content = ''
+            
+            if (index === 0) {
+                content = `
+                    <div onclick="event.stopImmediatePropagation()" class="modal bg-white max-w-2xl w-full rounded-3xl overflow-hidden">
+                        <div class="px-7 pt-7 pb-5">
+                            <div class="flex justify-between">
+                                <div>
+                                    <span class="text-xs text-[#C5A46E] font-semibold">ESSAY • MARCH 2025</span>
+                                    <h3 class="text-3xl font-semibold heading-serif tracking-tighter mt-1">The Language of Flowers: A Quiet Manifesto</h3>
+                                </div>
+                                <button onclick="this.closest('.fixed').remove()" class="text-[#77726B]">✕</button>
+                            </div>
+                            
+                            <div class="prose text-sm text-[#47433E] mt-6 leading-relaxed">
+                                <p>In a world saturated by excess, true beauty is found in restraint. At ÉCLAT we do not chase trends. We listen to nature.</p>
+                                
+                                <p class="mt-4">Each arrangement begins with the question: What does this moment require? Our florals are not decorative. They are statements of presence.</p>
+                                
+                                <div class="my-5 italic text-xs border-l-2 border-[#C5A46E] pl-4">“The most powerful arrangements are those that make you stop. They do not shout. They invite.” — Margot Laurent</div>
+                                
+                                <p>Seasonality is our compass. The ephemeral nature of flowers is not a flaw, but the source of their power.</p>
+                            </div>
+                            
+                            <div class="flex items-center mt-5 pt-4 border-t text-xs">
+                                <div class="flex-1">By Margot Laurent</div>
+                                <button onclick="this.closest('.fixed').remove()" class="px-5 py-1.5 rounded-2xl text-xs font-medium border border-[#EDE9E3]">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                `
+            } else if (index === 1) {
+                content = `
+                    <div onclick="event.stopImmediatePropagation()" class="modal bg-white max-w-2xl w-full rounded-3xl overflow-hidden">
+                        <div class="px-7 pt-7 pb-5">
+                            <div class="flex justify-between">
+                                <div>
+                                    <span class="text-xs text-[#C5A46E] font-semibold">FIELD NOTES • FEBRUARY 2025</span>
+                                    <h3 class="text-3xl font-semibold heading-serif tracking-tighter mt-1">Spring at ÉCLAT: A Season in Bloom</h3>
+                                </div>
+                                <button onclick="this.closest('.fixed').remove()" class="text-[#77726B]">✕</button>
+                            </div>
+                            
+                            <div class="text-sm text-[#47433E] mt-6 leading-relaxed">
+                                <p>The first peonies arrived this week from our grower in the south of France. Their delicate scent filled the atelier immediately.</p>
+                                
+                                <p class="mt-4">We have been preparing for this moment since January. Every stem is selected for its form, its color, its movement.</p>
+                                
+                                <div class="flex my-6 gap-2 flex-wrap">
+                                    <div class="px-3 text-xs bg-[#F1EDE6] py-1 rounded-full">Peonies</div>
+                                    <div class="px-3 text-xs bg-[#F1EDE6] py-1 rounded-full">Ranunculus</div>
+                                    <div class="px-3 text-xs bg-[#F1EDE6] py-1 rounded-full">Tulips</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center mt-4 pt-3 border-t text-xs">
+                                <div>By the ÉCLAT team</div>
+                                <button onclick="this.closest('.fixed').remove()" class="ml-auto px-5 py-[7px] text-xs font-medium border border-[#EDE9E3] rounded-2xl">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                `
+            } else {
+                content = `
+                    <div onclick="event.stopImmediatePropagation()" class="modal bg-white max-w-2xl w-full rounded-3xl overflow-hidden">
+                        <div class="px-7 pt-7 pb-5">
+                            <div class="flex justify-between">
+                                <div>
+                                    <span class="text-xs text-[#C5A46E] font-semibold">INTERVIEW • JANUARY 2025</span>
+                                    <h3 class="text-3xl font-semibold heading-serif tracking-tighter mt-1">Memory &amp; Form: Floral Design as Heirloom</h3>
+                                </div>
+                                <button onclick="this.closest('.fixed').remove()" class="text-[#77726B]">✕</button>
+                            </div>
+                            
+                            <div class="mt-5 text-sm leading-relaxed">
+                                <div class="italic">"We don’t design for Instagram. We design for the way a room feels when you walk into it, years later."</div>
+                                
+                                <p class="mt-4">Margot Laurent speaks with Kinfolk about the art of creating florals that become part of people’s lives and memories.</p>
+                                
+                                <div class="mt-6">
+                                    <div class="text-xs">— Excerpt from the interview</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 flex items-center justify-between pt-3 border-t">
+                                <div class="text-xs">Read full interview on Kinfolk</div>
+                                <button onclick="this.closest('.fixed').remove()" class="text-xs px-5 py-1.5 rounded-2xl border border-[#EDE9E3]">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+            
+            journalModal.innerHTML = content
+            document.body.appendChild(journalModal)
+        }
+        
+        function initScrollAnimations() {
+            // Simple fade-in animations using IntersectionObserver
+            const sections = document.querySelectorAll('section, header')
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transition = 'opacity 0.7s ease, transform 0.7s ease'
+                        entry.target.style.opacity = '1'
+                        entry.target.style.transform = 'translateY(0)'
+                        
+                        observer.unobserve(entry.target)
+                    }
+                })
+            }, { threshold: 0.1 })
+            
+            sections.forEach((section, index) => {
+                if (index > 0) { // Skip hero
+                    section.style.opacity = '0.97'
+                    section.style.transform = 'translateY(10px)'
+                    observer.observe(section)
+                }
+            })
+            
+            // Add subtle micro-interactions to cards
+            const cards = document.querySelectorAll('.floral-card')
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.boxShadow = '0 25px 50px -12px rgb(0 0 0 / 0.22), 0 10px 10px -6px rgb(0 0 0 / 0.1)'
+                })
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.boxShadow = '0 25px 50px -12px rgb(0 0 0 / 0.15), 0 10px 10px -6px rgb(0 0 0 / 0.1)'
+                })
+            })
+        }
+        
+        function initKeyboardShortcuts() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "/" && document.activeElement.tagName === "BODY") {
+                    e.preventDefault()
+                    const collectionsSection = document.getElementById('collections')
+                    collectionsSection.scrollIntoView({ behavior: 'smooth' })
+                }
+                
+                if (e.key.toLowerCase() === "?" && document.activeElement.tagName === "BODY") {
+                    e.preventDefault()
+                    showBookingModal()
+                }
+            })
+            
+            // Add hint for power users
+            console.log('%c[ÉCLAT] Press "/" to explore collections, "?" to book', 'color:#A19C94')
+        }
+        
+        function initNavHighlight() {
+            const navLinks = document.querySelectorAll('nav a')
+            const sections = ['collections', 'atelier', 'experiences', 'journal']
+            
+            window.addEventListener('scroll', () => {
+                let current = ''
+                
+                sections.forEach(sectionId => {
+                    const sectionEl = document.getElementById(sectionId)
+                    if (!sectionEl) return
+                    
+                    const sectionTop = sectionEl.getBoundingClientRect().top
+                    
+                    if (sectionTop <= 140) {
+                        current = sectionId
+                    }
+                })
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-active')
+                    
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('nav-active')
+                    }
+                })
+            })
+        }
+        
+        function init() {
+            initTailwind()
+            initScrollAnimations()
+            initKeyboardShortcuts()
+            initNavHighlight()
+            
+            // Add subtle hero animation hint
+            setTimeout(() => {
+                const hero = document.querySelector('header')
+                if (hero) {
+                    hero.style.transitionDuration = '300ms'
+                }
+            }, 800)
+            
+            // Preload a couple of images for smoothness
+            const preloadImages = ['assets/bouquet-eternal.jpg', 'assets/florist.jpg']
+            preloadImages.forEach(src => {
+                const img = new Image()
+                img.src = src
+            })
+            
+            // Easter egg: logo click opens shop
+            const logo = document.querySelector('nav .flex.items-center')
+            if (logo) {
+                logo.style.cursor = 'pointer'
+                logo.addEventListener('click', () => {
+                    showShopModal()
+                })
+            }
+            
+            // Initial demo: show a hint toast once
+            setTimeout(() => {
+                // Only if no other interaction happened
+                if (!document.querySelector('#toast-container > div')) {
+                    // No toast on load for premium feel
+                }
+            }, 10500)
+            
+            // Accessibility: close modals on escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const modals = document.querySelectorAll('.fixed.inset-0')
+                    if (modals.length > 0) {
+                        modals[modals.length - 1].remove()
+                    } else {
+                        const collectionModal = document.getElementById('collection-modal')
+                        const bookingModal = document.getElementById('booking-modal')
+                        const shopModal = document.getElementById('shop-modal')
+                        
+                        if (!collectionModal.classList.contains('hidden')) hideCollectionModal()
+                        else if (!bookingModal.classList.contains('hidden')) hideBookingModal()
+                        else if (!shopModal.classList.contains('hidden')) hideShopModal()
+                    }
+                }
+            })
+            
+            // Make sure all nav links work on mobile too (already handled)
+            console.log('%c[ÉCLAT] Premium website initialized successfully.', 'color: #77726B; font-size: 9px')
+        }
+        
+        // Boot the experience
+        window.onload = function() {
+            init()
+        }
+        
+        // Bonus: Allow direct access via console for development
+        window.ECLAT = { showCollectionModal, showBookingModal, showShopModal }
+    </script>
+</body>
+</html>
